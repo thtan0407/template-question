@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <menu-mobile></menu-mobile>
+        <myheader></myheader>
+        <main>
+            <sidebar></sidebar>
+
+            <div class="main-wrap">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <figure class="main-top-img">
+                            <img src="images/kansai2.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="main-top-right">
+                            <a href="#" class="link">Luyện thi JLPT <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <p>
+                                Tổng hợp 100 đề thi thử các cấp độ N1->N5, giúp làm quen với dạng đề trong kì thi JLPT hàng năm, khi làm bài xong sẽ có đánh giá kết quả gửi về mail để các bạn xem lại phần mình đã làm!dựa vào điểm đánh giá đó, các bạn có thể tự đánh giá mình đang ở mức nào, để tự lên lộ trình học tập phù hợp cho mình và đạt điểm cao trong các kì thi JLPT.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 main-content">
+                        <div class="head-content">
+                            <form class="search">
+                                <input type="text" name="" id="" placeholder="Tên công ty">
+                                <button></button>
+                                <a href="#" class="btn-create-review ml-2 mb-0 text-nowrap"><i class="fa fa-search" aria-hidden="true"></i> Tìm kiếm</a>
+                            </form>
+                            <a href="#" class="btn-create-review"><i class="fa fa-pencil-square-o"></i> Đăng đánh giá</a>
+                        </div>
+                        <div class="table-list-company">
+                            <div class="row-table" v-for="n in 10">
+                                <div class="col-rate">
+                                    <span class="start-rate rate-1"></span>
+                                </div>
+                                <div class="col-info">
+                                    <p class="companyi-info">
+                                        <a href="#">Fujitsu Limited, Nhật bản</a>
+                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
+                                    </p>
+                                    <div class="detail-show">
+                                        <ul>
+                                            <li>
+                                                <h5 class="color-cat-1">Title rate:</h5>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, labore quibusdam aliquid quia, quisquam atque deserunt alias quam possimus nostrum laborum eaque cupiditate neque unde itaque quas non blanditiis et.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h5 class="color-cat-2">Title rate:</h5>
+                                                <p>
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h5 class="color-cat-3">Title rate:</h5>
+                                                <p>
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h5 class="color-cat-4">Title rate:</h5>
+                                                <p>
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-date">
+                                    <span>Ngày đăng:(2020年6月26日)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+    <script src="js/vue.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    
+    <script>
+        var app = new Vue({
+            el: '#app',
+            components: {
+                'myheader': httpVueLoader('header.vue'),
+                'sidebar': httpVueLoader('sidebar.vue'),
+                'menu-mobile': httpVueLoader('menu-mobile.vue'),
+            },
+        });
+    </script>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery.mmenu.all.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

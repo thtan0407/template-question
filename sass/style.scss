@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@import '../sass/_fonts.scss';
+
+@import 
+'../sass/bootstrap-grid',
+'../sass/bootstrap-reboot',
+'../sass/bootstrap';
+
+
+@import 
+'../sass/reset',
+'../sass/variables',
+'../sass/body',
+'../sass/components/header',
+'../sass/components/sidebar',
+'../sass/components/breadcrumb',
+
+'../sass/page/home',
+'../sass/page/detail';

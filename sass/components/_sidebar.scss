@@ -1,0 +1,79 @@
+.sibebar{
+    width: 225px;
+    background: #222D32;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    h1{
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+        padding: 20px 0;
+        color: #FFFFFF;
+        border-bottom: 20px solid rgba(23, 162, 184, 0.1);;
+    }
+    .menu-sidebar{
+        .main-menu{
+            padding-left: 0;
+            .menu-item{
+                >.menu-link{
+                    color: #B8C7CE;
+                    font-weight: 500;
+                    display: inline-block;
+                    padding: 10px 0 9px;
+                    padding-left: 20px;
+                    &:hover{
+                        color: #FFFFFF;
+                    }
+                    i{
+                        font-size: 16px;
+                        margin-right: 5px;
+                    }
+                }
+                &.has-sub{
+                    .toggle-sub{
+                        color: #B8C7CE;
+                        float: right;
+                        padding: 10px;
+                    }
+                }
+                &.active{
+                    &>.menu-link{
+                        color: #FFFFFF;
+                        font-weight: 600;
+                    }
+                    .toggle-sub{
+                        color: #FFFFFF;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .sub-menu{
+                background: rgba(23, 162, 184, 0.1);
+                padding: 5px 0 5px 44px;
+                width: 100%;
+                display: none;
+                .menu-link{
+                    display: inline-block;
+                    width: 100%;
+                    color: rgba(255, 255, 255, 0.6);
+                    padding: 2px 0;
+                    &:hover{
+                        color: #FFC107;
+                    }
+                }
+                .active{
+                    .menu-link{
+                        color: #FFC107;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px){
+    .sibebar{
+        display: none;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <menu-mobile></menu-mobile>
+        <myheader></myheader>
+        <main>
+            <sidebar></sidebar>
+
+            <div class="main-wrap">
+                <div class="row">
+                    <div class="col-12 col-xl-6">
+                        <div class="main-detail-left">
+                            <div class="d-flex align-items-start">
+                                <h2 class="fs-14 text-black">会社評価スコア</h2>
+                                <span class="start-rate rate-3" style="background-image: url('images/5-star-rating-w.png');"></span>
+                            </div>
+                            <span class="text-gray">Điểm đánh giá chung.</span>
+                            <div class="point-rate">
+                                <span class="title">Hạng mục:</span>
+                                <div class="point-rate-items">
+                                    <span class="color-cat-1 color-cat-title">待遇制度</span>
+                                    <span class="bar">
+                                        <span class="process color-1"></span>
+                                    </span>
+                                    <span class="point">67</span>
+                                </div>
+                                <div class="point-rate-items">
+                                    <span class="color-cat-2 color-cat-title">風通しの良さ</span>
+                                    <span class="bar">
+                                        <span class="process color-2"></span>
+                                    </span>
+                                    <span class="point">67</span>
+                                </div>
+                                <div class="point-rate-items">
+                                    <span class="color-cat-3 color-cat-title">人材成長教育</span>
+                                    <span class="bar">
+                                        <span class="process color-3"></span>
+                                    </span>
+                                    <span class="point">67</span>
+                                </div>
+                                <div class="point-rate-items">
+                                    <span class="color-cat-4 color-cat-title">企業文化</span>
+                                    <span class="bar">
+                                        <span class="process color-4"></span>
+                                    </span>
+                                    <span class="point">67</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <div class="tab-detail-right">
+                            <h4 class="detail-right-title">Bình luận khác</h4>
+                            <div class="table-list-company">
+                                <div class="row-table" v-for="n in 10">
+                                    <div class="col-rate">
+                                        <span class="start-rate rate-1"></span>
+                                    </div>
+                                    <div class="col-info">
+                                        <p class="companyi-info">
+                                            <a href="#">Fujitsu Limited, Nhật bản</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-date">
+                                        <span>2020年6月26日</span>
+                                    </div>
+                                    <div class="col-btn">
+                                        <a href="#" class="btn-detail">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="main-detail">
+                            <h4 class="main-detail-title">Chi tiết bình luận: <span>Tester</span></h4>
+                            <div class="detail-item" v-for="n in 10">
+                                <div class="d-flex align-items-start">
+                                    <h5 class="name">待遇制度</h5>
+                                    <span class="start-rate rate-3"></span>
+                                </div>
+                                <div class="comment-detail">
+                                    <p>Ngày hôm nay, tui sẽ được ngồi trong hội trường đông nghịt ng, mặc bộ đồ cử nhân lên nhận bằng tốt nghiệp sau bao ngày học hành vất vả.Nhưng Covid đã lấy đi của tui tất cả 😭</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+    <script src="js/vue.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    
+    <script>
+        var app = new Vue({
+            el: '#app',
+            components: {
+                'myheader': httpVueLoader('header.vue'),
+                'sidebar': httpVueLoader('sidebar.vue'),
+                'menu-mobile': httpVueLoader('menu-mobile.vue'),
+            },
+        });
+    </script>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery.mmenu.all.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

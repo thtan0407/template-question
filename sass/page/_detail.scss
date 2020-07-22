@@ -1,0 +1,96 @@
+.main-detail-left{
+    h2{
+        font-weight: 500;
+        margin-right: 5px;
+        margin-bottom: 6px;
+    }
+    .point-rate{
+        max-width: 485px;
+        margin-top: 20px;
+        background: #c9e4e9;
+        padding: 10px;
+        border-radius: 4px;
+        .title{
+            display: block;
+            margin-bottom: 6px;
+        }
+        .point-rate-items{
+            @extend .d-flex;
+            margin-bottom: 12px;
+            .color-cat-title{
+                font-weight: 500;
+                font-size: 14px;
+                @include col-w(100px);
+            }
+            .bar{
+                width: 330px;
+                height: 18px;
+                .process{
+                    height: 18px;
+                    width: 100%;
+                    @extend .d-flex;
+                    &.color-1{
+                        background: #2196F3;
+                    }
+                    &.color-2{
+                        background: #F44336;
+                    }
+                    &.color-3{
+                        background: #00BCD4;
+                    }
+                    &.color-4{
+                        background: #FF9800;
+                    }
+                }
+            }
+            .point{
+                margin-left: auto;
+            }
+        }
+    }
+}
+.tab-detail-right{
+    .detail-right-title{
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    .table-list-company .row-table .col-info .companyi-info{
+        text-overflow: ellipsis;
+    }
+}
+
+.main-detail{
+    background: #C9E4E9;
+    border-radius: 4px;
+    margin-top: 30px;
+    padding: 5px 15px;
+    .main-detail-title{
+        font-weight: 600;
+        font-size: 16px;
+        padding-top: 5px;
+        margin-bottom: 15px;
+        span{
+            color: #17A2B8;
+        }
+    }
+    .detail-item{
+        margin-bottom: 30px;
+        .start-rate{
+            margin-top: -3px;
+        }
+        .name{
+            font-weight: 500;
+            font-size: 16px;
+            color: #333333;
+            margin-right: 5px;
+        }
+        .comment-detail{
+            margin-top: 5px;
+            padding-left: 20px;
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
