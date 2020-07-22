@@ -168,3 +168,21 @@
         margin-bottom: 0;
     }
 }
+
+@media screen and (min-width: 991px) {
+    .custom-scroll::-webkit-scrollbar {
+        width: .3rem;
+    }
+
+    .custom-scroll::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
