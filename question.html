@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/theme-style.css">
 </head>
 
+<!-- Thêm class custom-scroll vào thẻ body -->
+<!-- Style lại thanh scroll của giao diện -->
+
 <body class="custom-scroll">
 
 <div id="app">
@@ -25,6 +28,22 @@
             <div class="wrapper-question">
                 <div class="row">
                     <div class="col-12">
+                        <!--        Start button top     -->
+                        <div class="question-buttons d-md-flex align-items-md-center justify-content-md-between">
+                            <div class="question-column-left">
+                                <button class="question-button">N5</button>
+                                <button class="question-button">N4</button>
+                                <button class="question-button">N3</button>
+                                <button class="question-button">N2</button>
+                                <button class="question-button">N1</button>
+                            </div>
+                            <div class="question-column-right">
+                                <button class="question-button">Login để làm đề khác <i class="fa fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!--        End button top -->
+
                         <!--        Dạng 1                -->
                         <div class="question-inner question-format-01">
                             <div class="question-heading">
@@ -307,16 +326,20 @@
                                     <div class="question-title">
                                         <b>Câu 1:</b>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ea iste
-                                        libero magni porro quae quas, rerum sint ut voluptatem? Accusantium alias animi,
-                                        assumenda consequuntur dolore ea excepturi expedita magni minima, obcaecati
-                                        possimus recusandae saepe tempora. Adipisci beatae debitis doloribus enim, error
-                                        facere illum inventore maiores provident quia, rem, temporibus veritatis! Ea ex
-                                        facere maxime optio possimus reiciendis repellat, repudiandae.
+                                            libero magni porro quae quas, rerum sint ut voluptatem? Accusantium alias
+                                            animi,
+                                            assumenda consequuntur dolore ea excepturi expedita magni minima, obcaecati
+                                            possimus recusandae saepe tempora. Adipisci beatae debitis doloribus enim,
+                                            error
+                                            facere illum inventore maiores provident quia, rem, temporibus veritatis! Ea
+                                            ex
+                                            facere maxime optio possimus reiciendis repellat, repudiandae.
                                         </p>
                                     </div>
                                     <div class="question-content">
                                         <div class="question-subtitle">
-                                            <span>(1)</span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, nisi, recusandae. Eius fugiat, voluptatum!
+                                            <span>(1)</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Delectus, nisi, recusandae. Eius fugiat, voluptatum!
                                         </div>
                                         <div class="question-group">
                                             <input type="radio" name="questionb1" id="questionb11" class="style-radio">
@@ -337,7 +360,7 @@
                                     </div>
                                     <div class="question-content">
                                         <div class="question-subtitle">
-                                            <span>(2)</span>  Lorem ipsum dolor sit amet
+                                            <span>(2)</span> Lorem ipsum dolor sit amet
                                         </div>
                                         <div class="question-group">
                                             <input type="radio" name="questionb2" id="questionb21" class="style-radio">
@@ -361,6 +384,17 @@
                             </div>
                         </div>
                         <!--        End dạng 2                -->
+
+                        <!--        Start button                -->
+                        <div class="question-actions">
+                            <button class="question-button button-next">
+                                Lorem ipsum dolor sit
+                            </button>
+                            <button data-toggle="modal" data-target="#popupScores" type="button"
+                                    class="question-button button-submit">Nộp bài test
+                            </button>
+                        </div>
+                        <!--        End button                -->
                     </div>
                 </div>
             </div>
@@ -368,6 +402,30 @@
     </main>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="popupScores" tabindex="-1"  data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="fa fa-times"></span>
+            </button>
+            <div class="modal-body">
+                <div class="score-top">
+                    <div class="score-number">
+                        90
+                    </div>
+                    <div class="score-text">
+                        <h4>Hoàn thành !</h4>
+                        <p>Trả lời đúng: <b>36/40</b></p>
+                    </div>
+                </div>
+                <div class="score-bottom">
+                    <button class="question-button button-submit">Nộp kết quả</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="js/vue.js"></script>
 <script src="https://unpkg.com/http-vue-loader"></script>
@@ -387,6 +445,9 @@
 <script src="js/jquery.mmenu.all.js"></script>
 
 <script src="js/main.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
