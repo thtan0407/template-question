@@ -17,6 +17,15 @@
 <!-- Style lại thanh scroll của giao diện -->
 
 <body class="custom-scroll">
+<div class="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-radius">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
 
 <div id="app">
     <menu-mobile></menu-mobile>
@@ -31,14 +40,15 @@
                         <!--        Start button top     -->
                         <div class="question-buttons d-md-flex align-items-md-center justify-content-md-between">
                             <div class="question-column-left">
-                                <button class="question-button">N5</button>
+                                <button class="question-button button-active">N5</button>
                                 <button class="question-button">N4</button>
                                 <button class="question-button">N3</button>
                                 <button class="question-button">N2</button>
                                 <button class="question-button">N1</button>
                             </div>
                             <div class="question-column-right">
-                                <button class="question-button">Login để làm đề khác <i class="fa fa-arrow-right"></i>
+                                <button class="question-button" data-toggle="modal" data-target="#popupAlert"
+                                        type="button">Login để làm đề khác <i class="fa fa-arrow-right"></i>
                                 </button>
                             </div>
                         </div>
@@ -402,14 +412,16 @@
     </main>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="popupScores" tabindex="-1"  data-backdrop="static">
+<!-- Modal Điểm Số -->
+<div class="modal fade" id="popupScores" tabindex="-1" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span class="fa fa-times"></span>
             </button>
             <div class="modal-body">
+                <!--    Đổ dữ liệu: điểm số, số câu trả lời đúng v.v.. bằng cách xài id, attribute -->
+                <!--    Đừng thay đổi class             -->
                 <div class="score-top">
                     <div class="score-number">
                         90
@@ -426,6 +438,29 @@
         </div>
     </div>
 </div>
+<!-- End Modal Điểm số -->
+
+<!-- Modal Login -> thông báo -->
+<div class="modal fade" id="popupAlert" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="fa fa-times"></span>
+            </button>
+            <div class="modal-body">
+                <div class="score-top">
+                    <div class="score-text">
+                        <p>bạn cần làm khảo sát để làm đề tiếp theo!</p>
+                    </div>
+                </div>
+                <div class="score-bottom">
+                    <button class="question-button button-ok">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal Login -> thông báo -->
 
 <script src="js/vue.js"></script>
 <script src="https://unpkg.com/http-vue-loader"></script>
@@ -442,11 +477,20 @@
 </script>
 
 <script src="js/jquery-3.4.1.js"></script>
-<script src="js/jquery.mmenu.all.js"></script>
+<script defer src="js/jquery.mmenu.all.js"></script>
 
-<script src="js/main.js"></script>
+<script defer src="js/main.js"></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+<!-- Plugin của boostrap, nếu chỉ mỗi file này xài popup hoặc bất kì compenent nào của bootstrap thì anh hãy nhúng vào nha  -->
+<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('.preloader').fadeOut(2000);
+    });
+</script>
 
 </body>
 
