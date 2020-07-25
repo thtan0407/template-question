@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change pass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme-style.css">
+</head>
+
+<!-- Thêm class custom-scroll vào thẻ body -->
+<!-- Style lại thanh scroll của giao diện -->
+
+<body class="custom-scroll">
+
+<!-- Loading -->
+<div class="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-radius">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<!-- End loading -->
+
+
+<div id="app">
+    <menu-mobile></menu-mobile>
+    <myheader></myheader>
+    <main>
+        <sidebar></sidebar>
+
+        <div class="main-wrap">
+            <div class="wrapper-changepass">
+                <div class="row">
+                    <div class="col-sm-8 offset-sm-2 col-md-4 offset-md-4">
+                        <div class="changepass-title">
+                            <img src="images/logo_noel.png" alt="">
+                            <h3>Change Your Password</h3>
+                        </div>
+                        <div class="changepass-content">
+                            <form action="" id="changepassForm">
+                                <div class="form-group">
+                                    <label for="pass-old">
+                                        Old Password
+                                    </label>
+                                    <input type="password" class="form-control" name="pass-old" id="pass-old"
+                                           placeholder="Mật khẩu cũ">
+                                    <span class="changepass-error"><i class="fa fa-times"></i> Vui lòng nhập mật khẩu</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass-new">
+                                        New Password
+                                    </label>
+                                    <input type="password" class="form-control" name="pass-new" id="pass-new"
+                                           placeholder="Mật khẩu mới">
+                                    <span class="changepass-error"><i class="fa fa-times"></i> Vui lòng nhập mật khẩu mới </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass-renew">
+                                        Confirm New Password
+                                    </label>
+                                    <input type="password" class="form-control" name="pass-renew" id="pass-renew"
+                                           placeholder="Nhập lại mật khẩu mới">
+                                    <span class="changepass-error"><i class="fa fa-times"></i> Vui lòng nhập lại mật khẩu mới</span>
+                                </div>
+                                <div class="form-group text-center my-5">
+                                    <button type="submit"
+                                            class="changepass-button button-submit">Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/vue.js"></script>
+<script src="https://unpkg.com/http-vue-loader"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        components: {
+            'myheader': httpVueLoader('header.vue'),
+            'sidebar': httpVueLoader('sidebar.vue'),
+            'menu-mobile': httpVueLoader('menu-mobile.vue'),
+        },
+    });
+</script>
+
+<script src="js/jquery-3.4.1.js"></script>
+<script defer src="js/jquery.mmenu.all.js"></script>
+
+<script defer src="js/main.js"></script>
+
+<!-- Plugin của boostrap, nếu chỉ mỗi file này xài popup hoặc bất kì compenent nào của bootstrap thì anh hãy nhúng vào nha  -->
+<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+<!--
+--
+-- Code cũ
+--
+-->
+
+<!-- Script Loading -->
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('.preloader').fadeOut(2000);
+    });
+</script>
+<!-- End loading -->
+
+<!--
+--
+-- Code mới - xử lý validate - validate submit form
+--
+-->
+
+<!-- Modal Cập nhật thành công -->
+<div class="modal fade" id="popupChangeSuccess" tabindex="-1"  data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="images/close.svg" alt="">
+            </button>
+            <div class="modal-body">
+                <div class="score-top">
+                    <div class="score-number">
+                        <img src="images/check.svg" alt="">
+                    </div>
+                    <div class="score-text">
+                        <h5>Đổi mật khẩu thành công !</h5>
+                    </div>
+                </div>
+                <div class="score-bottom">
+                    <button  data-dismiss="modal" class="question-button button-submit">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal cập nhật thành công -->
+
+<!-- Modal Cập nhật thất bại -->
+<div class="modal fade" id="popupChangeFail" tabindex="-1"  data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="images/close.svg" alt="">
+            </button>
+            <div class="modal-body">
+                <div class="score-top">
+                    <div class="score-number">
+                        <img src="images/close-red.svg" alt="">
+                    </div>
+                    <div class="score-text">
+                        <h5>Đổi mật khẩu thất bại !</h5>
+                    </div>
+                </div>
+                <div class="score-bottom">
+                    <button data-dismiss="modal" class="question-button button-ok">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal cập nhật thất bại -->
+
+<script>
+    $(function () {
+        $('#pass-old, #pass-new, #pass-renew').on("change paste", function () {
+            if ($(this).val() != '') {
+                $(this).next('.changepass-error').removeClass('show-error');
+            }
+        });
+
+
+        $('#changepassForm').submit(function () {
+            var oldPass = $(this).find('#pass-old').val();
+            var newPass = $(this).find('#pass-new').val();
+            var reNewPass = $(this).find('#pass-renew').val();
+
+            if (oldPass == '') {
+                $('#pass-old').next('.changepass-error').addClass('show-error');
+                return false;
+            }
+
+            if(newPass == '') {
+                $('#pass-new').next('.changepass-error').addClass('show-error');
+                return false;
+            }
+
+            if(reNewPass == '') {
+                $('#pass-renew').next('.changepass-error').addClass('show-error');
+                return false;
+            }
+
+            if (newPass != reNewPass) {
+                $('#pass-new').next('.changepass-error').addClass('show-error').html('<i class="fa fa-times"></i> Mật khẩu mới và nhập lại phải giống nhau');
+                $('#pass-renew').next('.changepass-error').addClass('show-error').html('<i class="fa fa-times"></i> Mật khẩu mới và nhập lại phải giống nhau');
+                return false;
+            }
+
+        //    Chỗ này anh xử lý, cập nhật thành công và thất bại nha
+
+        //    Cập nhật thành công
+            $('#popupChangeSuccess').modal('show');
+
+        //    Cập nhật thất bại
+        //     $('#popupChangeFail').modal('show');
+
+            return false;
+        });
+    });
+</script>
+
+</body>
+
+</html>
