@@ -1,0 +1,14 @@
+File detail.html
+
+*******
+Thay đổi cấu trúc source ở dòng 28 -> 35 (thêm 1 div class style-title bao nội dung bên trong)
+Thêm 1 class đi kèm  ở dòng 70 (class style-detail)
+
+************
+************
+
+File header.vue
+
+*****
+2 Button đăng nhập, đăng xuất em có thêm 1 cái class d-none vào, khi nào anh xử lý thì gỡ class đó ra là ok
+Đoạn script xử lý đóng/mở user nằm ở cuối file approve.html

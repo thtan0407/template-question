@@ -29,9 +29,38 @@
                     </li>
                 </ul>
             </nav>
-            <div class="login d-none d-md-block">
-                <a href="#">Đăng nhập</a>
-                <a href="#">Đăng ký</a>
+            <div class="login view-info d-none d-md-block">
+
+                <a class="d-none" href="#">Đăng nhập</a>
+                <a class="d-none" href="#">Đăng ký</a>
+
+                <a class="info-user" href="javascript:void(0)">
+                    <i class="fa fa-info"></i>
+                    Thông tin tài khoản
+                </a>
+                <ul>
+                    <li>
+                        <span>
+                            <i class="fa fa-user"></i>
+                                Họ tên:
+                        </span>
+                        Nguyễn Văn A
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa fa-book"></i>
+                            Điểm số:
+                        </span>
+                        36/40
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa fa-line-chart"></i>
+                            Lượt truy cập:
+                        </span>
+                        8 lần
+                    </li>
+                </ul>
             </div>
             <div class="menu-icon d-block d-xl-none ml-auto ml-md-2">
                 <a href="#menu-mobile"><i class="fa fa-bars" aria-hidden="true"></i></a>

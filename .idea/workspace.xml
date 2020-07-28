@@ -22,7 +22,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../form-contact" />
+    <property name="last_opened_file_path" value="D:/VietCore/nangluongmattroi" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -39,7 +39,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595675767858</updated>
-      <workItem from="1595675769593" duration="5778000" />
+      <workItem from="1595675769593" duration="6578000" />
+      <workItem from="1595771660968" duration="764000" />
+      <workItem from="1595774686238" duration="1753000" />
+      <workItem from="1595812147910" duration="106000" />
     </task>
     <servers />
   </component>
@@ -47,10 +50,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1595679032422">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1595812254016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595679032422" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595812254016" />
     <state x="339" y="17" width="670" height="676" key="search.everywhere.popup" timestamp="1595678167734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
