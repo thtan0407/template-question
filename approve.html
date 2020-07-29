@@ -253,6 +253,18 @@
 
 <!-- Script -->
 <script>
+    //    Đóng/mở user
+    $(document).ready(function () {
+        $('.view-info .info-user').click(function () {
+            viewinfo = $(this).parent();
+            if (viewinfo.hasClass('open')) {
+                viewinfo.removeClass('open');
+            } else {
+                viewinfo.addClass('open');
+            }
+        });
+    });
+
     $(document).ready(function () {
         // Xóa bài đăng
         $(document).on('click', '#delete-post', function (e) {
@@ -292,17 +304,6 @@
     });
 
 
-    //    Đóng/mở user
-    $(document).ready(function () {
-        $('.view-info .info-user').click(function () {
-            viewinfo = $(this).parent();
-            if (viewinfo.hasClass('open')) {
-                viewinfo.removeClass('open');
-            } else {
-                viewinfo.addClass('open');
-            }
-        });
-    });
 </script>
 <!-- End Script -->
 
